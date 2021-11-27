@@ -9,15 +9,9 @@
 <body>
     
 
-    <?php
-    $isAdmin= true;
-    if($isAdmin):    
-     ?> 
-       <h2>Code for admin</h2>
-     <?php  else: ?> 
-   
-        <h2>Code for guest</h2>
+<?php for($i= 0; $i <= 10; $i++): ?> 
+    <p> <?= $i ?> Lorem, ipsum.</p>
+    <?php endfor ?>  
 
-        <?php endif  ?>
 </body>
 </html
