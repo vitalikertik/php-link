@@ -11,14 +11,13 @@
 
     <?php
     $isAdmin= true;
-
-    if($isAdmin){git intl_is_failure
+    if($isAdmin):    
      ?> 
-<h2>Code for admin</h2>
-     <?php } else{ ?> 
+       <h2>Code for admin</h2>
+     <?php  else: ?> 
    
         <h2>Code for guest</h2>
 
-        <?php }  ?>
+        <?php endif  ?>
 </body>
-</html>
+</html
