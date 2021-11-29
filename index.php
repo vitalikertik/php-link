@@ -8,10 +8,40 @@
 </head>
 <body>
     
+<?php
+//$users = array(); 
+$users = ['Vasya', 'Bob', 'Jhon'];
+echo 'Total users:' . count($users) . '<br>';
+echo 'First user:' . $users[0] . '<br>';
 
-<?php for($i= 0; $i <= 10; $i++): ?> 
-    <p> <?= $i ?> Lorem, ipsum.</p>
-    <?php endfor ?>  
+foreach($users as $user){
+    echo $user . '<br>';
+}
+
+$countries = [
+'Germany' => 'Berlin',
+'France' => 'Paris',
+'Spain' => 'Madrid'
+];
+
+echo $countries['Spain'] . '<br>';
+
+foreach ($countries as $country => $capital) {
+    echo "<p>$country - $capital</p>";
+    # code...
+}
+?>
+
+<table border='1'>
+    <tbody>
+        <?php foreach ($countries as $country => $capital): ?>
+        <tr>
+        <td><?=$country ?> </td>
+        <td><?= $capital ?></td>
+        </tr>
+        <?php endforeach ?>
+    </tbody>
+</table>
 
 </body>
 </html
