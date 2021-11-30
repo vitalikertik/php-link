@@ -14,8 +14,8 @@
 
 <body>
 
-    <?php
-    //$users = array(); 
+    <!-- <?php
+    $users = array(); 
     $users = ['Vasya', 'Bob', 'Jhon'];
     echo 'Total users:' . count($users) . '<br>';
     echo 'First user:' . $users[0] . '<br>';
@@ -34,7 +34,6 @@
 
     foreach ($countries as $country => $capital) {
         echo "<p>$country - $capital</p>";
-        # code...
     }
     ?>
 
@@ -47,32 +46,28 @@
                 </tr>
             <?php endforeach ?>
         </tbody>
-    </table>
+    </table> -->
+
+    <?php
+    $menu = [
+        'Home' => 'http://site.ua',
+        'About Us' => 'http://site.ua/about-us',
+        'Services' => 'http://site.ua/services',
+        'Contacts' => 'http://site.ua/contacts',
+    ];
+    foreach ($menu as $link => $href) { ?>
+
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-
-
         <div class="collapse navbar-collapse color" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="http://site.ua">Home</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="http://site.ua/about-us">Home</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="http://site.ua/services">Link</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link " href="http://site.ua/contacts">Disabled</a>
-                </li>
+               <?php echo "<li class='nav-item'>
+                    <a class='nav-link active' aria-current='page' href='$href'  > $link </a>
+                </li>"; } ?>
             </ul>
-
-        </div>
         </div>
     </nav>
+
 </body>
 
 </html
